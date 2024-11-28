@@ -1,0 +1,27 @@
+name: Pipeline versiones
+
+on: 
+ pull_request:
+  branches:
+   - main
+
+ push:
+  branches:
+   - main
+
+jobs:
+ build:
+  runs-on: ubuntu-latest
+
+  steps:
+   - name: Configuracion entorno
+     uses: actions/checkout@v3
+
+   - name: revisando la informacion
+     run: echo "Se esta ejecutando el entorno"
+
+   - name: análisis del repositorio
+     run: echo "Se esta analizando el proyecto"
+
+   - name: Listar archivos
+     run: ls - la
